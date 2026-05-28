@@ -1,0 +1,7 @@
+packages:
+  - '.'
+allowBuilds:
+  esbuild: true
+  sharp: true
+patchedDependencies:
+  '@astrojs/sitemap@3.7.3': patches/@astrojs__sitemap@3.7.3.patch
