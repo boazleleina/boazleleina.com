@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@astrojs/sitemap@3.7.3': a411b42b11a76cb15f4ebf5d7775a7ffbf29d15c5f278ed5d206f8064c9d9699
+
 importers:
 
   .:
@@ -16,7 +19,7 @@ importers:
         version: 3.0.0
       '@astrojs/sitemap':
         specifier: ^3.0.1
-        version: 3.7.3
+        version: 3.7.3(patch_hash=a411b42b11a76cb15f4ebf5d7775a7ffbf29d15c5f278ed5d206f8064c9d9699)
       '@astrojs/tailwind':
         specifier: ^5.0.3
         version: 5.1.5(astro@4.16.19(@types/node@24.12.4)(rollup@4.60.4)(typescript@5.9.3))(tailwindcss@3.4.19(yaml@2.9.0))
@@ -2411,7 +2414,7 @@ snapshots:
       fast-xml-parser: 4.5.6
       kleur: 4.1.5
 
-  '@astrojs/sitemap@3.7.3':
+  '@astrojs/sitemap@3.7.3(patch_hash=a411b42b11a76cb15f4ebf5d7775a7ffbf29d15c5f278ed5d206f8064c9d9699)':
     dependencies:
       sitemap: 9.0.1
       stream-replace-string: 2.0.0
