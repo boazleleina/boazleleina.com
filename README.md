@@ -7,7 +7,6 @@ This project serves as a showcase of my technical expertise, cloud engineering b
 🔗 **Live Website**: [boazleleina.com](https://boazleleina.com) (Local dev: `http://localhost:4322`)  
 🔗 **LinkedIn**: [linkedin.com/in/boaz-leleina](https://www.linkedin.com/in/boaz-leleina/)  
 🔗 **X (Twitter)**: [x.com/boaz_leleina](https://x.com/boaz_leleina)  
-📧 **Email**: [boazleleina3@gmail.com](mailto:boazleleina3@gmail.com)
 
 ---
 
