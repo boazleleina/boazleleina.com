@@ -4,15 +4,20 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+  <div class="flex justify-between items-center mb-5">
+    <div class="text-3xl font-bold">Resume</div>
+    <a href="/Bleleina_Resume.pdf" download class="btn btn-primary btn-sm flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      Download PDF
+    </a>
   </div>
 
   <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Backend engineer with production experience building Python/Django, FastAPI, PostgreSQL, and AWS systems across EdTech and AI startups. Focused on LLM applications, document-grounded assistants, and agentic workflows. MS Computer Science candidate graduating August 2026.
   </div>
 
   <div class="mb-5">
@@ -21,12 +26,12 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+      title="Master of Science in Computer Science"
+      subtitle="Sep 2024 to Aug 2026 at William Jessup University, Rocklin, CA — GPA: 4.0"
     />
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+      title="Bachelor of Science in Software Development"
+      subtitle="Apr 2018 to Dec 2022 at KCA University, Nairobi, Kenya — GPA: 3.6"
     />
   </div>
 
@@ -36,22 +41,68 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Software Engineer"
+      subtitle="Jan 2024 to Sep 2024 at Appstec America, Seattle, WA (Remote)"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Improved active engagement on an EdTech learning platform serving thousands of users by shipping React frontend optimizations and Django backend performance fixes across the stack.</li>
+        <li>Reduced p95 API latency from 520ms to 310ms (40% reduction) by optimizing PostgreSQL schema, adding indexes, and resolving N+1 query patterns.</li>
+        <li>Improved Stripe payment success rate by 20% by adding idempotent retry logic and PCI-DSS-aligned webhook handling.</li>
+        <li>Implemented SSO integration with Udemy Business, streamlining access for the user base and reducing login-related support volume.</li>
+      </ul>
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Backend Engineer (Contract)"
+      subtitle="Jan 2023 to Dec 2023 at Gre8 Intelligence, Los Angeles, CA (Remote)"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Built an LLM-powered onboarding and recommendation system in Django using the OpenAI API to classify incoming businesses across industry dimensions and recommend service packages when classification confidence exceeded a defined threshold, removing manual sales triage across pilot deployments serving 100+ end users.</li>
+        <li>Implemented a document-grounded Q&A assistant on the OpenAI API that ingested company documents (mission, vision, FAQs, policies) to answer employee questions in natural language, reducing internal support volume for newly onboarded clients.</li>
+        <li>Built a browser-based real-time video conferencing service using WebSockets with live transcription (Django backend, TypeScript frontend), adding retry logic, health checks, and structured logging to diagnose join failures and transcript loss in production.</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Projects</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Resume Agent"
+      subtitle="Python, FastAPI, Streamlit, Ollama, Qwen3, pdfplumber, Pydantic, pytest"
+    >
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Built a privacy-preserving AI resume review tool that runs locally with Ollama, grades resume-to-job fit, and proposes traceable resume edits without inventing experience.</li>
+        <li>Designed an 8-stage agent pipeline with model routing across Qwen3 4B for structured extraction and Qwen3 8B for reasoning-heavy fit analysis.</li>
+        <li>Built a 4-layer job description parser using JSON-LD, Trafilatura, BeautifulSoup, and fallback heuristics to handle varied posting formats.</li>
+        <li>Shipped a Streamlit frontend with Server-Sent Events streaming and a 25-test pytest suite covering parsing, SSRF protections, and schema integrity.</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Leadership & Community Engagement</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Keynote Speaker & Featured Speaker"
+      subtitle="2025 at The Samburu Project, Los Angeles, CA"
+    >
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Delivered keynote at the Splash Bash Gala at SmogShoppe in Los Angeles; event contributed to over $315,000 raised in support of clean water, education, and community development initiatives for marginalized communities in Samburu, Kenya.</li>
+        <li>Featured speaker at the Hike for Water annual fundraiser, which raised approximately $25,000 supporting water access and community programs in rural Kenya.</li>
+      </ul>
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="STEM Mentor"
+      subtitle="2020 to 2022 at STEM Mentorship Program, Kenya"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Mentored high school students in Mathematics, Chemistry, and Computer Studies, focused on building technical foundations for learners in underserved regions of Kenya.</li>
+        <li>Contributed to measurable improvements in STEM outcomes, with mentees demonstrating stronger performance in national exams and increased pursuit of STEM-related university programs.</li>
+      </ul>
     </TimeLineElement>
   </div>
 
@@ -61,10 +112,9 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
     <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
+      <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/" target="_blank" class="hover:underline">
+        AWS Certified Cloud Practitioner
+      </a>
     </li>
   </ul>
 
@@ -73,20 +123,22 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
+    <li>Python</li>
+    <li>SQL</li>
+    <li>TypeScript</li>
+    <li>Django (DRF)</li>
+    <li>FastAPI</li>
+    <li>REST APIs</li>
+    <li>OpenAPI</li>
+    <li>PostgreSQL</li>
+    <li>pgvector</li>
+    <li>AWS (EC2, S3, Lambda)</li>
+    <li>Docker</li>
+    <li>GitHub Actions</li>
+    <li>OpenAI API</li>
+    <li>Ollama</li>
+    <li>Agentic Pipelines</li>
+    <li>Structured Extraction</li>
+    <li>Prompt Engineering</li>
   </ul>
 </BaseLayout>

@@ -22,6 +22,11 @@ const {
   <head>
     <BaseHead title={title} description={description} image={image} , ogType={ogType} />
     {TRANSITION_API && <ViewTransitions />}
+    <script is:inline>
+      // Blocking script to prevent Flash of Un-themed Content (FOUC)
+      const theme = localStorage.getItem('theme') || 'lofi';
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">
@@ -37,5 +42,41 @@ const {
       </div>
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
+
+    <script is:inline>
+      // Interactive script to toggle theme and sync all slider toggles
+      const applyTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        
+        // Update all toggle checkboxes on the page
+        const toggles = document.querySelectorAll('input.theme-toggle-btn');
+        toggles.forEach(toggle => {
+          toggle.checked = (theme === 'dark');
+        });
+      };
+
+      const setupTheme = () => {
+        const currentTheme = localStorage.getItem('theme') || 'lofi';
+        applyTheme(currentTheme);
+
+        document.querySelectorAll('input.theme-toggle-btn').forEach(toggle => {
+          // Remove old listeners to avoid stacking them during page transitions
+          const newToggle = toggle.cloneNode(true);
+          toggle.parentNode.replaceChild(newToggle, toggle);
+
+          newToggle.addEventListener('change', (e) => {
+            const newTheme = e.target.checked ? 'dark' : 'lofi';
+            applyTheme(newTheme);
+          });
+        });
+      };
+
+      // Run on initial load
+      setupTheme();
+
+      // Run on ViewTransitions page swaps
+      document.addEventListener('astro:after-swap', setupTheme);
+    </script>
   </body>
 </html>

@@ -1,3 +1,11 @@
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
+
+/* Force theme toggle slider to always be fully rounded in all themes */
+.theme-toggle-btn.toggle {
+    border-radius: 9999px !important;
+}
+.theme-toggle-btn.toggle::before {
+    border-radius: 9999px !important;
+}
