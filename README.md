@@ -1,289 +1,95 @@
-# Astrofy | Personal Portfolio Website Template
+# Boaz Leleina — Backend & Cloud Engineer
 
-![Astrofy | Personal Porfolio Website Template](public/social_img.webp)
+Welcome to the repository for my personal portfolio website, built with **Astro 4**, **TailwindCSS**, and **DaisyUI**. 
 
-Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with a Blog, CV, Project Section, Store, and RSS Feed.
+This project serves as a showcase of my technical expertise, cloud engineering background, and AI integration capabilities. It is optimized for speed, responsive design, and SEO, scoring exceptionally high on core web vitals.
 
-## Demo
+🔗 **Live Website**: [boazleleina.com](https://boazleleina.com) (Local dev: `http://localhost:4322`)  
+🔗 **LinkedIn**: [linkedin.com/in/boaz-leleina](https://www.linkedin.com/in/boaz-leleina/)  
+🔗 **X (Twitter)**: [x.com/boaz_leleina](https://x.com/boaz_leleina)  
+📧 **Email**: [boazleleina3@gmail.com](mailto:boazleleina3@gmail.com)
 
-View a live demo of [Astrofy](https://astrofy-template.netlify.app/)
-
-## Installation
-
-Run the following command in your terminal
-
-```bash
-pnpm install
-```
-
-Once the packages are installed you are ready to run astro. Astro comes with a built-in development server that has everything you need for project development. The astro dev command will start the local development server so that you can see your new website in action for the very first time.
-
-```bash
-pnpm run dev
-```
-
-## Tech Stack
-
-- [Astro](https://astro.build)
-- [tailwindcss](https://tailwindcss.com/)
-- [DaisyUI](https://daisyui.com/)
-
-## Project Structure
-
-```php
-├── src/
-│   ├── components/
-│   │   ├── cv/
-│   │   │   ├── TimeLine
-│   │   ├── BaseHead.astro
-│   │   ├── Card.astro
-│   │   ├── Footer.astro
-│   │   ├── Header.astro
-│   │   └── HorizontalCard.astro
-│   │   └── SideBar.astro
-│   │   └── SideBarMenu.astro
-│   │   └── SideBarFooter.astro
-│   ├── content/
-│   │   ├── blog/
-│   │   │   ├── post1.md
-│   │   │   ├── post2.md
-│   │   │   └── post3.md
-│   │   ├── store/
-│   │   │   ├── item1.md
-│   │   │   ├── item2.md
-│   ├── layouts/
-│   │   └── BaseLayout.astro
-│   │   └── PostLayout.astro
-│   └── pages/
-│   │   ├── blog/
-│   │   │   ├── [...page].astro
-│   │   │   ├── [slug].astro
-│   │   └── cv.astro
-│   │   └── index.astro
-│   │   └── projects.astro
-│   │   └── rss.xml.js
-│   ├── styles/
-│   │   └── global.css
-│   └── config.ts
-├── public/
-│   ├── favicon.svg
-│   └── profile.webp
-│   └── social_img.webp
-├── astro.config.mjs
-├── tailwind.config.cjs
-├── package.json
-└── tsconfig.json
-```
-
-### Site config
-
-You can change global site configuration on '/src/config.ts' file:
-
-- **SITE_TITLE**: Default pages title.
-- **SITE_DESCRIPTION**: Default pages title.
-- **GENERATE_SLUG_FROM_TITLE**: By default Astrofy will generate the blog slug pages base on the article name. Set this var to false if you want to use the Astro file base (Compatible with Astrofy older versions).
-- **TRANSITION_API**: Enable and disable transition API
-
-### Components usage
-
-#### Layout Components
-
-The `BaseHead`, `Footer`, `Header`, and `SideBar` components are already included in the layout system. To change the website content you can edit the content of these components.
-
-##### SideBar
-
-In the Sidebar you can change your profilePicture, links to all your website pages, and your social icons.
-
-You can change your avatar shape using [mask classes](https://daisyui.com/components/mask/).
-
-The used social-icons are SVG form [BoxIcons](https://boxicons.com/) pack. You can replace the icons in the `SideBarFooter` component
-
-To add a new page in the sidebar go to the `SideBarMenu` component.
-
-```
-<li><a class="py-3 text-base" id="home" href="/">Home</a></li>
-
-```
-
-**Note**: In order to change the sidebar menu's active item, you need to setup the prop `sideBarActiveItemID` in the `BaseLayout` component of your new page and add that id to the link in the `SideBarMenu`
-
-#### TimeLine
-
-The timeline components are used to confirm the CV.
-
-```html
-<div class="time-line-container">
-  <TimeLineElement title="Element Title" subtitle="Subtitle">
-    Content that can contain
-    <div>divs</div>
-    and <span>anything else you want</span>.
-  </TimeLineElement>
-  ...
-</div>
-```
-
-#### Card & HorizontalCard
-
-The cards are primarly used for the Project and the Blog components. They include a picture, a title, and a description. 
-
-```html
-<HorizontalCard title="Card Title" img="imge_url" desc="Description" url="Link
-URL" target="Optional link target (_blank default)" badge="Optional badge"
-tags={['Array','of','tags']} />
-```
-
-#### HorizontalCard Shop Item
-
-
-This component is already included in the Store layout of the template. In case you want to use it in another place these are the props.
-
-```html
-<HorizontalShopItem
-  title="Item Title"
-  img="imge_url"
-  desc="Item description"
-  pricing="current_price"
-  oldPricing="old_price"
-  checkoutUrl="external store checkout url"
-  badge="Optional badge"
-  url="item details url"
-  custom_link="Custom link url"
-  custom_link_label="Cutom link btn label"
-  target="Optional link target (_self default)"
-/>
-```
-
-#### Adding a Custom Component
-
-To add a custom component, you can create a .astro file in the components folder under the source folder. 
-
-Components must follow this template. The ```---``` represents the code fence and uses Javascript and can be used for imports. 
-
-The HTML component is the actual style of your new component. 
-
-```html
 ---
-// Component Script (JavaScript)
+
+## 🚀 About Me
+
+I am a **Backend & Cloud Engineer** with production experience building resilient Python/Django, FastAPI, PostgreSQL, and AWS systems across EdTech and AI startups. 
+
+Currently an **M.S. in Computer Science candidate** (graduating August 2026) with a perfect **4.0 GPA**, my technical focus centers on the intersection of **LLM applications**, **document-grounded assistants**, **agentic workflows**, and the **cloud architecture** that powers them.
+
+- 🎓 **MS in Computer Science** (WJU, Rocklin, CA — GPA: 4.0)
+- ☁️ **AWS Certified Cloud Practitioner**
+- 🦁 **Samburu Advocate** (Keynote Speaker at *The Samburu Project* Splash Bash Gala in Los Angeles)
+
 ---
-<!-- Component Template (HTML + JS Expressions) -->
-```
 
-For more details, see the [astro components](https://docs.astro.build/en/core-concepts/astro-components/) documentation here. 
+## 🛠️ Tech Stack & Engineering Practices
 
-### Layouts
+This portfolio was constructed to serve as a testbed for modern front-end build tools, responsive layout design, and clean web engineering:
 
-Include `BaseLayout` in each page you add and `PostLayout` to your post pages.
+- **Framework**: [Astro 4](https://astro.build/) — Used for island-architecture loading and ultra-fast static HTML generation.
+- **Styling**: [TailwindCSS](https://tailwindcss.com/) & [DaisyUI](https://daisyui.com/) — Clean, utility-first styling utilizing high-contrast monochrome light & dark modes.
+- **Package Management**: [pnpm](https://pnpm.io/) — Fast, workspace-compatible package dependency resolution.
+- **SEO & Performance**: Integrated sitemap generation using `@astrojs/sitemap`, automated `robots.txt`, semantic HTML structures, and responsive image compression (`.webp` format).
 
-The BaseLayout defines a general template for each new webpage you want to add. It imports constants SITE_TITLE and SITE_DESCRIPTION which can be modified in the ```../config``` folder. Data placed there can be imported anywhere using import. 
-
-### Content
-
-You can add a [content collection](https://docs.astro.build/en/guides/content-collections/) in `/content/' folder, you will need add it at config.ts.
-
-#### config.ts
-
-Where you need to define your content collections, we define our content schemas too.
-
-#### Blog
-
-Add your `md` blog post in the `/content/blog/` folder.
-
-##### Post format
-
-Add code with this format in the top of each post file.
-
-```
 ---
-title: "Post Title"
-description: "Description"
-pubDate: "Post date format(Sep 10 2022)"
-heroImage: "Post Hero Image URL"
+
+## ⚡ Engineered Highlights of this Repository
+
+For recruiters inspecting this codebase, here are a few custom enhancements I have engineered beyond the default template structure:
+
+1. **State-Synchronized Dark Mode Slider**:
+   - Engineered a custom, dual-control **Sun/Moon slider toggle** inside `src/components/Header.astro` (for mobile) and `src/components/SideBar.astro` (for desktop).
+   - Solved Flash of Un-themed Content (FOUC) by inserting a tiny blocking script in the `<head>` of [BaseLayout.astro](src/layouts/BaseLayout.astro) to apply the localStorage theme before visual rendering begins.
+   - Built state synchronization listening to Astro's `astro:after-swap` navigation lifecycle, guaranteeing theme persistence across page changes.
+2. **Defensive Sitemap Integration**:
+   - Debugged and patched a known sitemap generation error under certain dynamic routing environments by adding a defensive safeguard check (`_routes || []`) in the bundle structure to secure production builds.
+3. **Structured Resume Web-Interface**:
+   - Custom-coded a rich resume layout inside [cv.astro](src/pages/cv.astro), translating vector resume components into clean CSS components, combined with a premium top-right PDF download anchor linking directly to [Bleleina_Resume.pdf](public/Bleleina_Resume.pdf).
+4. **Witty Custom 404 Experience**:
+   - Customized a humorous, developer-centric [404.astro](src/pages/404.astro) page displaying my custom `avatar.webp` image, reading: *"Whoops, the cows ate my page 🐄"*—a playful Samburu-nomadic spin on the classic "dog ate my homework" joke.
+
 ---
-```
 
-### Pages
+## 📂 Key Projects Spotlighted
 
-#### Blog
+### 🤖 **Resume Agent** — *Python, FastAPI, Streamlit, Ollama, Qwen3, pdfplumber, Pydantic, pytest*
+A privacy-preserving AI resume review tool designed to run entirely locally using Ollama.
+* **Agent Architecture**: Designed an 8-stage agent pipeline with model routing across **Qwen3 4B** (for high-speed structured data extraction) and **Qwen3 8B** (for deep, reasoning-heavy resume-to-job fit analysis).
+* **Parsing Engine**: Developed a robust 4-layer job description parsing engine leveraging JSON-LD metadata, BeautifulSoup, and fallback heuristic algorithms to gracefully parse inconsistent job formats.
+* **Reliability & Testing**: Integrated a 25-test suite utilizing **pytest** to validate schema extraction integrity, parsing edge cases, and SSRF security boundaries.
 
-Blog uses Astro's content collection to query post's `md`.
-
-##### [page].astro
-
-The `[page].astro` is the route to work with the paginated post list. You can change there the number of items listed for each page and the pagination button labels.
-
-##### [slug].astro
-
-The `[slug].astro` is the base route for every blog post, you can customize the page layout or behaviour, by default uses `content/blog` for content collection and `PostLayout` as layout.
-
-#### Shop
-
-Add your `md` item in the `/pages/shop/` folder.
-
-##### [page].astro
-
-The `[page].astro` is the route to work with the paginated item list. You can change there the number of items listed for each page and the pagination button labels. The shop will render all `.md` files you include inside this folder.
-
-##### Item format
-
-Add code with this format at the top of each item file.
-
-```js
 ---
-title: "Demo Item 1"
-description: "Item description"
-heroImage: "Item img url"
-details: true // show or hide details btn
-custom_link_label: "Custom btn link label"
-custom_link: "Custom btn link"
-pubDate: "Sep 15 2022"
-pricing: "$15"
-oldPricing: "$25.5"
-badge: "Featured"
-checkoutUrl: "https://checkouturl.com/"
+
+## 🏗️ Local Setup & Exploration
+
+To clone and explore this repository locally, make sure you have [Node.js](https://nodejs.org/) installed:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/boazleleina/boazleleina.com.git
+   cd boazleleina.com
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   pnpm install
+   ```
+
+3. **Run the Local Development Server**:
+   ```bash
+   pnpm run dev
+   ```
+
+4. **Verify the Production Build**:
+   ```bash
+   pnpm run build
+   ```
+
 ---
-```
 
-#### Static pages
+## 🤝 Let's Connect!
 
-The other pages included in the template are static pages. The `index` page belongs to the root page. You can add your pages directly in the `/pages` folder and then add a link to those pages in the `sidebar` component.
+I am always interested in discussing document-grounded assistants, agentic pipelines, LLM fine-tuning, and robust cloud backend engineering. 
 
-Feel free to modify the content included in the pages that the template contains or add the ones you need.
-
-### Theming
-
-To change the template theme change the `data-theme` attribute of the `<html>` tag in `BaseLayout.astro` file.
-
-You can choose among 30 themes available or create your custom theme. See themes available [here](https://daisyui.com/docs/themes/).
-
-## Sitemap
-
-The Sitemap is generated automatically when you build your website in the root of the domain. Please update the `robots.txt` file in the public folder with your site name URL for the Sitemap.
-
-## Deploy
-
-You can deploy your site on your favourite static hosting service such as Vercel, Netlify, GitHub Pages, etc.
-
-The configuration for the deployment varies depending on the platform where you are going to do it. See the [official Astro information](https://docs.astro.build/en/guides/deploy/) to deploy your website.
-
-> **⚠️ CAUTION** </br>
-> The Blog pagination of this template is implemented using dynamic route parameters in its filename and for now this format is incompatible with SSR deploy configs, so please use the default static deploy options for your deployments.
-
-## Contributing
-
-Suggestions and pull requests are welcomed! Feel free to open a discussion or an issue for a new feature request or bug.
-
-One of the best ways to contribute is to grab a [bug report or feature suggestion](https://github.com/manuelernestog/astrofy/issues) that has been marked `accepted` and dig in.
-
-Please be wary of working on issues _not_ marked as `accepted`. Just because someone has created an issue doesn't mean we'll accept a pull request for it.
-
-## License
-
-Astrofy is licensed under the MIT license — see the [LICENSE](https://github.com/manuelernestog/astrofy/blob/main/LICENSE) file for details.
-
-## Contributors
-
-<a href="https://github.com/manuelernestog/astrofy/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=manuelernestog/astrofy" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
+If you are a recruiter or an engineering lead looking for a cloud developer with an AI-focused mindset, feel free to review my [Resume PDF](public/Bleleina_Resume.pdf), read my CV at [/cv](https://boazleleina.com/cv), or ping me on **[LinkedIn](https://www.linkedin.com/in/boaz-leleina/)**!
